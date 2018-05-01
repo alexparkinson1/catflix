@@ -6,12 +6,14 @@ import { HttpClientModule }    from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MeowviesComponent } from './meowvies/meowvies.component';
 import { MeowvieService } from './meowvie.service';
+import { MeowvieDetailComponent } from './meowvie-detail/meowvie-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MeowviesComponent
+    MeowviesComponent,
+    MeowvieDetailComponent
   ],
   imports: [
     BrowserModule,
