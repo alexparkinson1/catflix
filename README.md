@@ -6,6 +6,8 @@ Netflix for cats. Click on movie images to bring up popup with title and starrin
 
 
 `npm install -g @angular/cli`
+
 `npm install`
+
 `ng serve --open`
 
