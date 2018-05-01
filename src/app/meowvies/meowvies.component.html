@@ -1,7 +1,8 @@
-<section class="meowvies">
-  <div *ngFor="let meowvie of meowvies" class="card" (click)="showDetail(meowvie)" [ngStyle]="{'background-image': 'url(' + meowvie.image + ')'}">
-    <span class="card-title">{{meowvie.title}}</span>
+<div class="meowvies container">
+  <div class="row">
+    <div *ngFor="let meowvie of meowvies" class="card col-sm" (click)="selectMeowvie(meowvie)" [ngStyle]="{'background-image': 'url(' + meowvie.image + ')'}">
+    </div>
   </div>
-</section>
+</div>
 
 <app-meowvie-detail [meowvie]="selectedMeowvie"></app-meowvie-detail>

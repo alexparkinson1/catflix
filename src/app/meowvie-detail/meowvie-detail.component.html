@@ -1,3 +1,11 @@
-<div *ngIf="meowvie">
-  <h2>{{ meowvie.title | uppercase }}</h2>
+<div *ngIf="meowvie" class="detail-modal" [ngStyle]="{'background-image': 'url(' + meowvie.image + ')'}">
+  <span class="close" (click)="close()">x</span>
+  <div class="vignette"></div>
+  <div class="modal-body">
+    <h2>{{ meowvie.title | uppercase }}</h2>
+    <div class="starring">
+      <p class="starring-title">Starring:</p>
+      <p *ngFor="let starring of meowvie.starring" class="starring-list">{{ starring }}</p>
+    </div>
+  </div>
 </div>

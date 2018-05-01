@@ -1,0 +1,63 @@
+.detail-modal {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+
+  @media only screen and (min-width: 780px)  {
+    width: 50%;
+    height: 50%;
+    bottom: 25%;
+    left: 25%;
+    position: absolute;
+  }
+
+  &.hidden {
+    visibility: hidden;
+  }
+
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #fff;
+}
+
+.vignette {
+  background-image: linear-gradient(to right,#000,transparent);
+  float: right;
+  display: inline-block;
+}
+
+.modal-body {
+  background-color: #000;
+
+  .starring {
+    color: #999;
+    margin-top: 50px;
+
+    .starring-title {
+      margin-bottom: 6px;
+    }
+
+    .starring-list {
+      margin: 0 0 0 10px;
+      font-size: 12px;
+    }
+  }
+}
+
+.modal-body, .vignette {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+}

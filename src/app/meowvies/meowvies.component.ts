@@ -5,7 +5,7 @@ import { Meowvie } from '../meowvie';
 @Component({
   selector: 'app-meowvies',
   templateUrl: './meowvies.component.html',
-  styleUrls: ['./meowvies.component.css']
+  styleUrls: ['./meowvies.component.scss']
 })
 export class MeowviesComponent implements OnInit {
 
@@ -19,8 +19,11 @@ export class MeowviesComponent implements OnInit {
     this.getMeowvies()
   }
 
-  showDetail(meowvie: Meowvie): void {
+  selectMeowvie(meowvie: Meowvie): void {
     this.selectedMeowvie = meowvie;
+    if (document.querySelector('.detail-modal')) {
+      document.querySelector('.detail-modal').classList.remove('hidden');
+    }
   }
 
   getMeowvies(): void {
